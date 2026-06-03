@@ -1,0 +1,330 @@
+{
+  "patterns": [
+    {
+      "id": "layered_architecture",
+      "name": "Layered Architecture",
+      "category": "system",
+      "description": "Application organized into presentation, business and persistence layers.",
+      "documentation_url": "https://martinfowler.com/bliki/LayeringPrinciples.html",
+      "required": {
+        "modules": ["controller", "service", "repository"]
+      },
+      "optional": {
+        "technologies": ["spring boot", "asp.net core", "django"]
+      }
+    },
+    {
+      "id": "modular_monolith",
+      "name": "Modular Monolith",
+      "category": "system",
+      "description": "Single deployable application separated into business modules.",
+      "documentation_url": "https://martinfowler.com/bliki/MonolithFirst.html",
+      "required": {
+        "keywords": ["module"]
+      },
+      "optional": {
+        "modules": ["billing", "customer", "order", "inventory"]
+      }
+    },
+    {
+      "id": "microservices",
+      "name": "Microservices",
+      "category": "system",
+      "description": "Application composed of independently deployable services.",
+      "documentation_url": "https://microservices.io/",
+      "required": {
+        "technologies": ["docker"]
+      },
+      "optional": {
+        "technologies": [
+          "kubernetes",
+          "grpc",
+          "spring cloud",
+          "consul",
+          "eureka"
+        ]
+      }
+    },
+    {
+      "id": "hexagonal_architecture",
+      "name": "Hexagonal Architecture",
+      "category": "system",
+      "description": "Ports and adapters architecture separating domain from infrastructure.",
+      "documentation_url": "https://alistair.cockburn.us/hexagonal-architecture/",
+      "required": {
+        "keywords": ["port", "adapter"]
+      },
+      "optional": {
+        "keywords": ["inbound adapter", "outbound adapter"]
+      }
+    },
+    {
+      "id": "clean_architecture",
+      "name": "Clean Architecture",
+      "category": "system",
+      "description": "Architecture centered around use cases and domain entities.",
+      "documentation_url": "https://blog.cleancoder.com/",
+      "required": {
+        "keywords": ["usecase", "entity", "domain"]
+      },
+      "optional": {
+        "keywords": ["interface adapter", "application service"]
+      }
+    },
+    {
+      "id": "onion_architecture",
+      "name": "Onion Architecture",
+      "category": "system",
+      "description": "Domain-centric layered architecture with dependency inversion.",
+      "documentation_url": "https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/",
+      "required": {
+        "keywords": ["domain", "infrastructure"]
+      },
+      "optional": {
+        "keywords": ["application layer", "core"]
+      }
+    },
+    {
+      "id": "cqrs",
+      "name": "CQRS",
+      "category": "system",
+      "description": "Separate command and query responsibilities.",
+      "documentation_url": "https://martinfowler.com/bliki/CQRS.html",
+      "required": {
+        "keywords": ["command", "query"]
+      },
+      "optional": {
+        "technologies": ["kafka", "rabbitmq"]
+      }
+    },
+    {
+      "id": "event_sourcing",
+      "name": "Event Sourcing",
+      "category": "system",
+      "description": "Application state reconstructed from stored events.",
+      "documentation_url": "https://martinfowler.com/eaaDev/EventSourcing.html",
+      "required": {
+        "keywords": ["event", "event store"]
+      },
+      "optional": {
+        "technologies": ["kafka"]
+      }
+    },
+    {
+      "id": "ddd",
+      "name": "Domain Driven Design",
+      "category": "system",
+      "description": "Domain-focused architecture based on aggregates and bounded contexts.",
+      "documentation_url": "https://domainlanguage.com/ddd/",
+      "required": {
+        "keywords": ["aggregate", "bounded context"]
+      },
+      "optional": {
+        "keywords": ["domain service", "value object", "repository"]
+      }
+    },
+    {
+      "id": "rest_api",
+      "name": "REST API",
+      "category": "communication",
+      "description": "Resource-oriented HTTP communication.",
+      "documentation_url": "https://restfulapi.net/",
+      "required": {
+        "protocols": ["http"],
+        "technologies": ["rest"]
+      },
+      "optional": {}
+    },
+    {
+      "id": "graphql_api",
+      "name": "GraphQL API",
+      "category": "communication",
+      "description": "Query-based API communication.",
+      "documentation_url": "https://graphql.org/learn/",
+      "required": {
+        "technologies": ["graphql"]
+      },
+      "optional": {}
+    },
+    {
+      "id": "grpc_communication",
+      "name": "gRPC Communication",
+      "category": "communication",
+      "description": "RPC-based communication using Protocol Buffers.",
+      "documentation_url": "https://grpc.io/docs/",
+      "required": {
+        "technologies": ["grpc"]
+      },
+      "optional": {
+        "technologies": ["protobuf"]
+      }
+    },
+    {
+      "id": "event_driven",
+      "name": "Event Driven Architecture",
+      "category": "communication",
+      "description": "Services communicate through events.",
+      "documentation_url": "https://microservices.io/patterns/data/event-driven-architecture.html",
+      "required": {
+        "technologies": ["kafka"]
+      },
+      "optional": {
+        "technologies": ["rabbitmq", "activemq"]
+      }
+    },
+    {
+      "id": "message_queue",
+      "name": "Message Queue Architecture",
+      "category": "communication",
+      "description": "Communication based on asynchronous queues.",
+      "documentation_url": "https://www.rabbitmq.com/tutorials",
+      "required": {
+        "technologies": ["rabbitmq"]
+      },
+      "optional": {
+        "protocols": ["amqp"]
+      }
+    },
+    {
+      "id": "pub_sub",
+      "name": "Publish Subscribe",
+      "category": "communication",
+      "description": "Publisher-subscriber communication pattern.",
+      "documentation_url": "https://learn.microsoft.com/azure/architecture/patterns/publisher-subscriber",
+      "required": {
+        "technologies": ["kafka"]
+      },
+      "optional": {
+        "technologies": ["mqtt"]
+      }
+    },
+    {
+      "id": "spring_mvc",
+      "name": "Spring MVC",
+      "category": "java",
+      "description": "Spring web MVC pattern.",
+      "documentation_url": "https://docs.spring.io/spring-framework/reference/web/webmvc.html",
+      "required": {
+        "technologies": ["spring boot"],
+        "annotations": [
+          "@RestController",
+          "@Controller"
+        ]
+      },
+      "optional": {}
+    },
+    {
+      "id": "spring_data",
+      "name": "Spring Data",
+      "category": "java",
+      "description": "Repository abstraction for persistence.",
+      "documentation_url": "https://spring.io/projects/spring-data",
+      "required": {
+        "technologies": ["spring data"]
+      },
+      "optional": {
+        "annotations": ["@Repository"]
+      }
+    },
+    {
+      "id": "spring_security",
+      "name": "Spring Security",
+      "category": "java",
+      "description": "Authentication and authorization framework.",
+      "documentation_url": "https://spring.io/projects/spring-security",
+      "required": {
+        "technologies": ["spring security"]
+      },
+      "optional": {
+        "annotations": ["@PreAuthorize", "@Secured"]
+      }
+    },
+    {
+      "id": "aspnet_mvc",
+      "name": "ASP.NET MVC",
+      "category": "csharp",
+      "description": "MVC architecture in ASP.NET.",
+      "documentation_url": "https://learn.microsoft.com/aspnet/core/mvc/",
+      "required": {
+        "technologies": ["asp.net core"]
+      },
+      "optional": {
+        "modules": ["controller"]
+      }
+    },
+    {
+      "id": "entity_framework",
+      "name": "Entity Framework",
+      "category": "csharp",
+      "description": "ORM pattern implementation in .NET.",
+      "documentation_url": "https://learn.microsoft.com/ef/core/",
+      "required": {
+        "technologies": ["entity framework"]
+      },
+      "optional": {}
+    },
+    {
+      "id": "django_mvt",
+      "name": "Django MVT",
+      "category": "python",
+      "description": "Model View Template architecture.",
+      "documentation_url": "https://docs.djangoproject.com/",
+      "required": {
+        "technologies": ["django"]
+      },
+      "optional": {
+        "modules": ["models", "views"]
+      }
+    },
+    {
+      "id": "fastapi_service",
+      "name": "FastAPI Service Architecture",
+      "category": "python",
+      "description": "API-first architecture built on FastAPI.",
+      "documentation_url": "https://fastapi.tiangolo.com/",
+      "required": {
+        "technologies": ["fastapi"]
+      },
+      "optional": {
+        "technologies": ["pydantic"]
+      }
+    },
+    {
+      "id": "containerized",
+      "name": "Containerized Architecture",
+      "category": "infrastructure",
+      "description": "Application packaged and deployed in containers.",
+      "documentation_url": "https://docs.docker.com/",
+      "required": {
+        "technologies": ["docker"]
+      },
+      "optional": {}
+    },
+    {
+      "id": "kubernetes_native",
+      "name": "Kubernetes Native",
+      "category": "infrastructure",
+      "description": "Architecture designed for Kubernetes orchestration.",
+      "documentation_url": "https://kubernetes.io/docs/",
+      "required": {
+        "technologies": ["kubernetes"]
+      },
+      "optional": {
+        "technologies": ["helm", "istio"]
+      }
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless Architecture",
+      "category": "infrastructure",
+      "description": "Functions executed on managed cloud platforms.",
+      "documentation_url": "https://aws.amazon.com/serverless/",
+      "required": {
+        "technologies": ["aws lambda"]
+      },
+      "optional": {
+        "technologies": ["azure functions", "google cloud functions"]
+      }
+    }
+  ]
+}
