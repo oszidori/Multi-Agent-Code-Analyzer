@@ -1,5 +1,6 @@
 import json
 from difflib import get_close_matches
+import os
 from pydantic import BaseModel
 
 FUZZY_CUTOFF = 0.6
@@ -16,7 +17,9 @@ def _load_knowledge(path: str) -> dict:
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
-def explain_technology(name: str, path: str) -> TechnologyInfo:
+COMMON_TECH_PATH = os.environ.get("COMMON_TECH_PATH")
+
+def explain_technology(name: str, path: str = COMMON_TECH_PATH) -> TechnologyInfo:
     db = _load_knowledge(path)
     matches = get_close_matches(name.lower(), db.keys(), n=1, cutoff=FUZZY_CUTOFF)
     entry = db[matches[0]] if matches else None

@@ -1,10 +1,12 @@
 import json
 from difflib import get_close_matches
+import os
 from pydantic import BaseModel
 
 # Minimum similarity ratio for fuzzy matching — 0.8 catches single-char typos
 # without risking false positives between similar-but-distinct words (e.g. "server" vs "service")
 FUZZY_CUTOFF = 0.8
+DESIGN_PATTERNS_PATH = os.environ.get("DESIGN_PATTERNS_PATH")
 
 # Facts extracted from the analyzed codebase, passed in by the calling agent
 class ArchitectureFacts(BaseModel):
@@ -114,7 +116,7 @@ def _load_knowledge(path: str) -> dict:
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
-def detect_patterns(knowledge_path: str, facts: ArchitectureFacts, threshold: float = 0.6) -> PatternDetectionResult:
+def detect_patterns(facts: ArchitectureFacts, knowledge_path: str = DESIGN_PATTERNS_PATH, threshold: float = 0.6) -> PatternDetectionResult:
     db = _load_knowledge(knowledge_path)
     detected: list[DetectedPattern] = []
 
