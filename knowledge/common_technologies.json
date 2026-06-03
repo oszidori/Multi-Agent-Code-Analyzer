@@ -1,0 +1,297 @@
+{
+  "spring boot": {
+    "category": "java_framework",
+    "description": "Framework for building Java applications and microservices.",
+    "architecture_role": "Application Framework",
+    "documentation_url": "https://spring.io/projects/spring-boot",
+    "related": ["spring mvc", "spring security", "spring data"]
+  },
+
+  "spring mvc": {
+    "category": "java_framework",
+    "description": "Web MVC framework for Java applications.",
+    "architecture_role": "Presentation Layer",
+    "documentation_url": "https://docs.spring.io/spring-framework/reference/web/webmvc.html",
+    "related": ["spring boot"]
+  },
+
+  "spring security": {
+    "category": "java_framework",
+    "description": "Authentication and authorization framework.",
+    "architecture_role": "Security Layer",
+    "documentation_url": "https://spring.io/projects/spring-security",
+    "related": ["spring boot"]
+  },
+
+  "hibernate": {
+    "category": "java_persistence",
+    "description": "ORM framework for Java.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://hibernate.org/orm/documentation/",
+    "related": ["jpa", "spring data"]
+  },
+
+  "jpa": {
+    "category": "java_persistence",
+    "description": "Java Persistence API specification.",
+    "architecture_role": "Persistence Abstraction",
+    "documentation_url": "https://jakarta.ee/specifications/persistence/",
+    "related": ["hibernate"]
+  },
+
+  "maven": {
+    "category": "build_tool",
+    "description": "Java build and dependency management tool.",
+    "architecture_role": "Build System",
+    "documentation_url": "https://maven.apache.org/guides/",
+    "related": ["gradle"]
+  },
+
+  "gradle": {
+    "category": "build_tool",
+    "description": "Build automation and dependency management tool.",
+    "architecture_role": "Build System",
+    "documentation_url": "https://docs.gradle.org/",
+    "related": ["maven"]
+  },
+
+  "asp.net core": {
+    "category": "csharp_framework",
+    "description": "Framework for building web APIs and applications in .NET.",
+    "architecture_role": "Application Framework",
+    "documentation_url": "https://learn.microsoft.com/aspnet/core/",
+    "related": ["entity framework"]
+  },
+
+  "entity framework": {
+    "category": "csharp_persistence",
+    "description": "ORM for .NET applications.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://learn.microsoft.com/ef/core/",
+    "related": ["asp.net core"]
+  },
+
+  ".net": {
+    "category": "csharp_platform",
+    "description": "Software development platform from Microsoft.",
+    "architecture_role": "Runtime Platform",
+    "documentation_url": "https://learn.microsoft.com/dotnet/",
+    "related": ["asp.net core"]
+  },
+
+  "django": {
+    "category": "python_framework",
+    "description": "High-level Python web framework.",
+    "architecture_role": "Application Framework",
+    "documentation_url": "https://docs.djangoproject.com/",
+    "related": ["postgresql", "redis"]
+  },
+
+  "flask": {
+    "category": "python_framework",
+    "description": "Lightweight Python web framework.",
+    "architecture_role": "Application Framework",
+    "documentation_url": "https://flask.palletsprojects.com/",
+    "related": ["sqlalchemy"]
+  },
+
+  "fastapi": {
+    "category": "python_framework",
+    "description": "Modern Python API framework.",
+    "architecture_role": "API Layer",
+    "documentation_url": "https://fastapi.tiangolo.com/",
+    "related": ["pydantic"]
+  },
+
+  "pydantic": {
+    "category": "python_library",
+    "description": "Data validation and serialization library.",
+    "architecture_role": "Data Modeling",
+    "documentation_url": "https://docs.pydantic.dev/",
+    "related": ["fastapi"]
+  },
+
+  "postgresql": {
+    "category": "database",
+    "description": "Relational database management system.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://www.postgresql.org/docs/",
+    "related": ["hibernate", "entity framework"]
+  },
+
+  "mysql": {
+    "category": "database",
+    "description": "Relational database management system.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://dev.mysql.com/doc/",
+    "related": []
+  },
+
+  "sql server": {
+    "category": "database",
+    "description": "Microsoft relational database platform.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://learn.microsoft.com/sql/",
+    "related": []
+  },
+
+  "mongodb": {
+    "category": "database",
+    "description": "Document-oriented NoSQL database.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://www.mongodb.com/docs/",
+    "related": ["morphia"]
+  },
+
+  "redis": {
+    "category": "database",
+    "description": "In-memory key-value datastore.",
+    "architecture_role": "Caching Layer",
+    "documentation_url": "https://redis.io/docs/",
+    "related": []
+  },
+
+  "elasticsearch": {
+    "category": "database",
+    "description": "Distributed search and analytics engine.",
+    "architecture_role": "Search Layer",
+    "documentation_url": "https://www.elastic.co/guide/",
+    "related": ["kibana"]
+  },
+
+  "kafka": {
+    "category": "messaging",
+    "description": "Distributed event streaming platform.",
+    "architecture_role": "Event Bus",
+    "documentation_url": "https://kafka.apache.org/documentation/",
+    "related": ["zookeeper"]
+  },
+
+  "rabbitmq": {
+    "category": "messaging",
+    "description": "Message broker implementing AMQP.",
+    "architecture_role": "Messaging Layer",
+    "documentation_url": "https://www.rabbitmq.com/documentation.html",
+    "related": ["amqp"]
+  },
+
+  "activemq": {
+    "category": "messaging",
+    "description": "Message broker supporting JMS and AMQP.",
+    "architecture_role": "Messaging Layer",
+    "documentation_url": "https://activemq.apache.org/components/classic/documentation/",
+    "related": ["jms"]
+  },
+
+  "grpc": {
+    "category": "communication",
+    "description": "High-performance RPC framework.",
+    "architecture_role": "Service Communication",
+    "documentation_url": "https://grpc.io/docs/",
+    "related": ["protobuf"]
+  },
+
+  "rest": {
+    "category": "communication",
+    "description": "HTTP-based resource-oriented communication style.",
+    "architecture_role": "API Communication",
+    "documentation_url": "https://restfulapi.net/",
+    "related": ["http", "json"]
+  },
+
+  "graphql": {
+    "category": "communication",
+    "description": "Query language for APIs.",
+    "architecture_role": "API Communication",
+    "documentation_url": "https://graphql.org/learn/",
+    "related": ["http"]
+  },
+
+  "websocket": {
+    "category": "communication",
+    "description": "Full-duplex communication protocol.",
+    "architecture_role": "Realtime Communication",
+    "documentation_url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+    "related": ["http"]
+  },
+
+  "http": {
+    "category": "protocol",
+    "description": "Application layer communication protocol.",
+    "architecture_role": "Transport Protocol",
+    "documentation_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    "related": ["https", "rest"]
+  },
+
+  "https": {
+    "category": "protocol",
+    "description": "Secure version of HTTP.",
+    "architecture_role": "Secure Transport",
+    "documentation_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    "related": ["tls"]
+  },
+
+  "amqp": {
+    "category": "protocol",
+    "description": "Messaging protocol used by brokers such as RabbitMQ.",
+    "architecture_role": "Message Transport",
+    "documentation_url": "https://www.amqp.org/resources/specifications",
+    "related": ["rabbitmq"]
+  },
+
+  "mqtt": {
+    "category": "protocol",
+    "description": "Lightweight publish-subscribe messaging protocol.",
+    "architecture_role": "IoT Communication",
+    "documentation_url": "https://mqtt.org/",
+    "related": []
+  },
+
+  "docker": {
+    "category": "containerization",
+    "description": "Container platform.",
+    "architecture_role": "Deployment Runtime",
+    "documentation_url": "https://docs.docker.com/",
+    "related": ["kubernetes"]
+  },
+
+  "kubernetes": {
+    "category": "orchestration",
+    "description": "Container orchestration platform.",
+    "architecture_role": "Infrastructure Platform",
+    "documentation_url": "https://kubernetes.io/docs/",
+    "related": ["docker"]
+  },
+
+  "terraform": {
+    "category": "infrastructure",
+    "description": "Infrastructure as Code platform.",
+    "architecture_role": "Provisioning Layer",
+    "documentation_url": "https://developer.hashicorp.com/terraform/docs",
+    "related": []
+  },
+
+  "aws": {
+    "category": "cloud",
+    "description": "Cloud computing platform.",
+    "architecture_role": "Infrastructure Provider",
+    "documentation_url": "https://docs.aws.amazon.com/",
+    "related": ["terraform"]
+  },
+
+  "azure": {
+    "category": "cloud",
+    "description": "Microsoft cloud platform.",
+    "architecture_role": "Infrastructure Provider",
+    "documentation_url": "https://learn.microsoft.com/azure/",
+    "related": []
+  },
+
+  "gcp": {
+    "category": "cloud",
+    "description": "Google Cloud Platform.",
+    "architecture_role": "Infrastructure Provider",
+    "documentation_url": "https://cloud.google.com/docs",
+    "related": []
+  }
+}
