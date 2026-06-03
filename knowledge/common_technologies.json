@@ -1,4 +1,20 @@
 {
+  "node.js": {
+  "category": "javascript_runtime",
+  "description": "JavaScript runtime built on Chrome's V8 engine for building scalable server-side applications.",
+  "architecture_role": "Application Runtime",
+  "documentation_url": "https://nodejs.org/en/docs",
+  "related": ["express", "nestjs", "npm"]
+  },
+
+  "java": {
+    "category": "java_platform",
+    "description": "General-purpose programming language and runtime platform used for enterprise, web, and cloud-native applications.",
+    "architecture_role": "Application Platform",
+    "documentation_url": "https://docs.oracle.com/en/java/",
+    "related": ["spring boot", "hibernate", "maven", "gradle"]
+  },
+
   "spring boot": {
     "category": "java_framework",
     "description": "Framework for building Java applications and microservices.",
@@ -86,6 +102,14 @@
     "documentation_url": "https://docs.djangoproject.com/",
     "related": ["postgresql", "redis"]
   },
+  
+  "python": {
+    "category": "python_platform",
+    "description": "General-purpose programming language widely used for web development, automation, data engineering, AI, and scientific computing.",
+    "architecture_role": "Application Platform",
+    "documentation_url": "https://docs.python.org/3/",
+    "related": ["django", "flask", "fastapi", "pydantic"]
+  },
 
   "flask": {
     "category": "python_framework",
@@ -109,6 +133,14 @@
     "architecture_role": "Data Modeling",
     "documentation_url": "https://docs.pydantic.dev/",
     "related": ["fastapi"]
+  },
+
+  "cloudant": {
+    "category": "database",
+    "description": "Fully managed JSON document database service based on Apache CouchDB, optimized for cloud-native applications.",
+    "architecture_role": "Persistence Layer",
+    "documentation_url": "https://cloud.ibm.com/docs/Cloudant",
+    "related": ["couchdb", "mongodb", "ibm cloud"]
   },
 
   "postgresql": {
