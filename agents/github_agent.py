@@ -12,10 +12,10 @@ class RepositoryContext(BaseModel):
     tree: str
     facts: ArchitectureFacts
 
-def build_github_agent(github_toolset: MCPToolset, model: OpenAIChatModel):
+def build_github_agent(model: OpenAIChatModel, toolset: MCPToolset):
     return Agent (
         model = model,
-        toolsets=[github_toolset],
+        toolsets=[toolset],
         output_type=RepositoryContext,
         system_prompt= """
             You are a code analysis specialist. 
@@ -31,7 +31,7 @@ def build_github_agent(github_toolset: MCPToolset, model: OpenAIChatModel):
         """
     )
 
-def discover_repository(question:str, github_agent: Agent) -> RepositoryContext:
+def run_github_agent(question:str, github_agent: Agent) -> RepositoryContext:
     print("Agent called: github_agent")
     max_retries = 3
     for attempt in range(max_retries):

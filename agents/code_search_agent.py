@@ -8,7 +8,7 @@ class CodeSearchResult(BaseModel):
     path: str
     snippet: str | None = None
     
-def build_code_search_agent(toolset: MCPToolset, model: OpenAIChatModel) -> Agent:
+def build_code_search_agent(model: OpenAIChatModel, toolset: MCPToolset) -> Agent:
     return Agent(
         model = model,
         toolsets=[toolset],
@@ -31,7 +31,7 @@ def build_code_search_agent(toolset: MCPToolset, model: OpenAIChatModel) -> Agen
         """
     )
 
-def search_code(question: str, repo_url: str, code_search_agent: Agent) -> list[CodeSearchResult]:
+def run_code_search_agent(question: str, repo_url: str, code_search_agent: Agent) -> list[CodeSearchResult]:
     user_prompt = question + "repo_url: " + repo_url
     
     print("Agent called: code_search_agent")
