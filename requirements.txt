@@ -1,0 +1,7 @@
+# Requirements for Multi-Agent Code Analyzer
+# Adjust versions as needed for your environment
+pydantic
+pydantic-ai
+fastmcp
+logfire
+openai

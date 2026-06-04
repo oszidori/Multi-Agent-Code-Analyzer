@@ -1,0 +1,12 @@
+# Environment variables — never commit real credentials
+.env
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logfire local data
+.logfire/
